@@ -14,7 +14,7 @@ app.use(
     domain: domain,
     clientId: clientId,
     authorizationParams: {
-      redirect_uri: 'https://auth-vue-5d5d.vercel.app/'
+      redirect_uri: 'https://auth-vue-5d5d.vercel.app'
     }
   })
 )
