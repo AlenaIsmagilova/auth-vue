@@ -13,8 +13,8 @@ app.use(router)
 
 app.use(
   createAuth0({
-    domain: import.meta.env.DOMAIN,
-    clientId: import.meta.env.CLIENT_ID,
+    domain: import.meta.env.VITE_DOMAIN,
+    clientId: import.meta.env.VITE_CLIENT_ID,
     authorizationParams: {
       redirect_uri: 'https://auth-vue-5d5d.vercel.app'
     }
