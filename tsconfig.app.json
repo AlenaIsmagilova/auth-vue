@@ -1,0 +1,18 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "auth_config.json", "./**/*.d.ts"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "esnext",
+    "strict": true,
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
