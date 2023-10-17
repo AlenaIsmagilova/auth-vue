@@ -1,20 +1,23 @@
 <template>
-  <div class="wrapper">
+  <Loader v-if="isLoading" />
+
+  <div class="wrapper" v-else>
     <img :src="image" class="image" />
     <p class="text">{{ firstName }}</p>
     <p class="text">{{ secondName }}</p>
     <p class="email">{{ email }}</p>
-    <button class="button" v-if="authenticated" @click="logout">Выйти</button>
+    <button class="button" @click="logout">Выйти</button>
   </div>
 </template>
 
 <script>
+import Loader from '../components/loader/Loader.vue'
+
 export default {
   computed: {
     authenticated() {
       return this.$auth0.isAuthenticated.value
     },
-
     firstName() {
       return this.$auth0.user.value.given_name
     },
@@ -26,7 +29,13 @@ export default {
     },
     email() {
       return this.$auth0.user.value.email
+    },
+    isLoading() {
+      return this.$auth0.isLoading.value
     }
+  },
+  components: {
+    Loader
   },
   methods: {
     logout() {

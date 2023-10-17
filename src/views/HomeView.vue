@@ -1,6 +1,8 @@
 <template>
   <main>
-    <div class="container" v-if="!authenticated">
+    <Loader v-if="isLoading" />
+
+    <div class="container" v-else>
       Войдите в свой аккаунт, чтобы продолжить
       <button class="button" @click="login">Войти</button>
     </div>
@@ -8,6 +10,8 @@
 </template>
 
 <script lang="ts">
+import Loader from '../components/loader/Loader.vue'
+
 export default {
   updated() {
     if (this.$auth0.isAuthenticated.value) {
@@ -22,7 +26,13 @@ export default {
   computed: {
     authenticated() {
       return this.$auth0.isAuthenticated.value
+    },
+    isLoading() {
+      return this.$auth0.isLoading.value
     }
+  },
+  components: {
+    Loader
   }
 }
 </script>

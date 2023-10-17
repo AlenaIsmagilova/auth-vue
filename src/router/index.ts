@@ -9,17 +9,12 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
-      beforeEnter: (to, from) => {
-        console.log(to)
-        console.log(from)
-      }
+      component: HomeView
     },
     {
       path: '/profile',
       name: 'profile',
       component: ProfileView
-      // beforeEnter: authGuard
     }
   ]
 })
