@@ -13,8 +13,7 @@ app.use(
     domain: 'dev-s2kjzkf3eqkybh0b.us.auth0.com',
     clientId: 'ebhmqMf0Ly5Fd7p3CGoDmhwCIgNOFeXQ',
     authorizationParams: {
-      // redirect_uri: 'https://auth-vue-5d5d.vercel.app/'
-      redirect_uri: 'http://localhost:5173'
+      redirect_uri: 'https://auth-vue-5d5d.vercel.app/'
     }
   })
 )
