@@ -9,7 +9,6 @@
     "module": "esnext",
     "target": "esnext",
     "strict": true,
-    "composite": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
