@@ -3,11 +3,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { createAuth0 } from '@auth0/auth0-vue'
-// import { domain, clientId } from '../auth_config.json'
 
 const app = createApp(App)
-
-console.log(import.meta.env)
 
 app.use(router)
 
